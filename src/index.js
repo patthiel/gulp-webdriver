@@ -14,7 +14,7 @@ module.exports = (options) => {
 
             if (code !== 0) {
                 process.nextTick(() => stream.emit('error', new gutil.PluginError('gulp-webdriver', `wdio exited with code ${code}`, {
-                    showStack: false
+                    showStack: true
                 })))
             }
 
